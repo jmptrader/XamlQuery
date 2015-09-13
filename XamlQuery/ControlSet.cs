@@ -20,12 +20,10 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using System.Reflection;
 
 namespace XamlQuery
@@ -943,7 +941,7 @@ namespace XamlQuery
                     switch (eventType)
                     {
                         case EventType.BindingValidationError:
-                            element.BindingValidationError += (EventHandler<ValidationErrorEventArgs>)handler;
+                            Validation.AddErrorHandler(element, (EventHandler<ValidationErrorEventArgs>)handler);
                             bound = true;
                             break;
                         case EventType.Loaded:

@@ -14,8 +14,6 @@
  * Revision: 1
  */
 
-using System;
-using System.Collections.Generic;
 
 namespace XamlQuery.XamlSelector
 {

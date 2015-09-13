@@ -14,10 +14,7 @@
  * Revision: 1
  */
 
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -72,7 +69,10 @@ namespace XamlQuery.XamlSelector
                     {
                         if (control is Panel)
                         {
-                            result.AddRange(from child in ((Panel)control).Children select (DependencyObject)child);
+                            foreach (var child in ((Panel)control).Children)
+                            {
+                                result.Add((DependencyObject)child);
+                            }
                         }
                     }
                     break;
@@ -86,7 +86,10 @@ namespace XamlQuery.XamlSelector
                             DependencyObject parent = ((FrameworkElement)control).Parent;
                             if (parent is Panel)
                             {
-                                result.AddRange(from child in ((Panel)parent).Children select (DependencyObject)child);
+                                foreach (var child in ((Panel)control).Children)
+                                {
+                                    result.Add((DependencyObject)child);
+                                }
                             }
                         }
                     }

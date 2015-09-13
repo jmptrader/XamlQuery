@@ -18,11 +18,6 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using System.Linq;
 using System.Reflection;
 
@@ -30,8 +25,6 @@ namespace XamlQuery.XamlSelector
 {
     internal class ControlUtility
     {
-        public const string AssemblyString = "System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
-
         #region Methods
 
         public static Type ResolveControlType(string controlTypeName)
@@ -125,7 +118,7 @@ namespace XamlQuery.XamlSelector
 
             try
             {
-                Assembly assembly = Assembly.Load(AssemblyString);
+                Assembly assembly = typeof(System.Windows.Application).Assembly;
                 Common.AddToLog(assembly.FullName);
                 Type[] allTypes = assembly.GetTypes();
 
@@ -137,7 +130,7 @@ namespace XamlQuery.XamlSelector
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Common.Error("Failed loading assembly [System.Windows].");
             }
