@@ -52,6 +52,7 @@
     <Compile Include="Enumerations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store.cs" />
+    <Compile Include="StyleParser.cs" />
     <Compile Include="XamlQuery.cs" />
     <Compile Include="XamlSelector\Combinator.cs" />
     <Compile Include="XamlSelector\ControlUtility.cs" />

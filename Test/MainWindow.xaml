@@ -6,9 +6,17 @@
         xmlns:local="clr-namespace:Test"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
-    <StackPanel>
-        <TextBlock Text="first" />
-        <TextBlock Text="second" />
-        <TextBlock Text="third" />
+    <StackPanel Margin="15">
+        <TextBlock Text="first" Margin="15" >
+            <TextBlock.Effect>
+                <BlurEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="second" Margin="15" >
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="third" Margin="15" />
     </StackPanel>
 </Window>

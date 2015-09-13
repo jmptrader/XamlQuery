@@ -56,6 +56,17 @@ namespace XamlQuery
             return (filteredControls);
         }
 
+        public ControlSet Style(string style)
+        {
+            var s = StyleParser.Parse(style);
+            foreach (var item in this)
+            {
+                item.GetType().GetProperty(s.Key).SetValue(item, s.Value, null);
+            }
+
+            return this;
+        }
+
         /// <summary>
         /// Finds controls whose type is any one of specified types.
         /// </summary>

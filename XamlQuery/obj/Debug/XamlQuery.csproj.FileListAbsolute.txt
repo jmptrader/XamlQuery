@@ -2,3 +2,4 @@ C:\Users\filmee24\Documents\GitHub\XamlQuery\XamlQuery\bin\Debug\XamlQuery.dll
 C:\Users\filmee24\Documents\GitHub\XamlQuery\XamlQuery\bin\Debug\XamlQuery.pdb
 C:\Users\filmee24\Documents\GitHub\XamlQuery\XamlQuery\obj\Debug\XamlQuery.dll
 C:\Users\filmee24\Documents\GitHub\XamlQuery\XamlQuery\obj\Debug\XamlQuery.pdb
+C:\Users\filmee24\Documents\GitHub\XamlQuery\XamlQuery\obj\Debug\XamlQuery.csprojResolveAssemblyReference.cache
